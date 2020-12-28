@@ -8,7 +8,7 @@ import home2 from '../img/home2.png'
 
 const ServicesSection = () => {
     return (
-        <div className='services'>
+        <div id='services' className='layout'>
             <div className="description">
                 <h2>Hi <span>quality</span> services</h2>
                 <div className="cards">
@@ -16,29 +16,29 @@ const ServicesSection = () => {
                         <div className="icon">
                             <img src={clock} alt="Clock" />
                             <h3>Efficient</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
                         </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div className="card">
                         <div className="icon">
                             <img src={diaphragm} alt="Diaphragm" />
                             <h3>Diaphragm</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
                         </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div className="card">
                         <div className="icon">
                             <img src={money} alt="Clock" />
                             <h3>Affordable</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
                         </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div className="card">
                         <div className="icon">
                             <img src={teamwork} alt="Teamwork" />
                             <h3>Teamwork</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
                         </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
             </div>
