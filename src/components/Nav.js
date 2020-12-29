@@ -1,20 +1,25 @@
 import React from 'react'
 
+//Router
+import {
+    Link
+} from 'react-router-dom'
+
 const Nav = () => {
     return (
         <nav>
             <h1>
-                <a id='logo' href="#">Capture</a>
+                <Link id='logo' to="/">Capture</Link>
             </h1>
             <ul>
                 <li>
-                    <a href="">1. About us</a>
+                    <Link to="/">1. About us</Link>
                 </li>
                 <li>
-                    <a href="">2. Our work</a>
+                    <Link to="/work">2. Our work</Link>
                 </li>
                 <li>
-                    <a href="">3. Contact</a>
+                    <Link to="/contact">3. Contact</Link>
                 </li>
             </ul>
         </nav>
