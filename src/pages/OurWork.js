@@ -1,37 +1,25 @@
-import React from 'react'
-//Images
-import athlete from '../img/athlete-small.png'
-import theracer from '../img/theracer-small.png'
-import goodtimes from '../img/goodtimes-small.png'
+import React, { useState } from 'react'
 //Router
 import {
     Link
 } from 'react-router-dom';
+import { MovieState } from '../movieState';
 
 const OurWork = () => {
+
+    const [movies, setMovies] = useState(MovieState);
+
     return (
         <div id='work'>
-            <div className="movie">
-                <h2>The Athlete</h2>
-                <div className="line"></div>
-                <Link>
-                    <img src={athlete} alt="The athlete" />
-                </Link>
-            </div>
-            <div className="movie">
-                <h2>The Racer</h2>
-                <div className="line"></div>
-                <Link>
-                    <img src={theracer} alt="The girl and the car" />
-                </Link>
-            </div>
-            <div className="movie">
-                <h2>Good Times</h2>
-                <div className="line"></div>
-                <Link>
-                    <img src={goodtimes} alt="The couple" />
-                </Link>
-            </div>
+            {movies.map((movie) => (
+                <div className="movie">
+                    <h2>{movie.title}</h2>
+                    <div className="line"></div>
+                    <Link to={movie.url}>
+                        <img src={movie.mainImg} alt={movie.title} />
+                    </Link>
+                </div>
+            ))}
         </div>
     )
 }

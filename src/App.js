@@ -1,6 +1,3 @@
-//Import pages
-import AboutUs from './pages/AboutUs'
-
 //Styles
 import './styles/app.scss'
 
@@ -10,10 +7,15 @@ import {
   Switch
 } from 'react-router-dom'
 
+//Components
+import Nav from './components/Nav'
+
 //Pages
+import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs';
 import OurWork from './pages/OurWork';
-import Nav from './components/Nav'
+import MovieDetail from './pages/MovieDetail'
+import NotFound from './pages/NotFound'
 
 
 function App() {
@@ -23,7 +25,9 @@ function App() {
       <Switch>
         <Route exact path='/' component={AboutUs} />
         <Route exact path='/work' component={OurWork} />
+        <Route exact path='/work/:id' component={MovieDetail} />
         <Route exact path='/contact' component={ContactUs} />
+        <Route path='*' component={NotFound} />
       </Switch>
     </div>
   );
