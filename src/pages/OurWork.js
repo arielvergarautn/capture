@@ -4,13 +4,16 @@ import {
     Link
 } from 'react-router-dom';
 import { MovieState } from '../movieState';
+//Animatios
+import { motion } from 'framer-motion'
+import { pageAnimation } from '../animation'
 
 const OurWork = () => {
 
     const [movies, setMovies] = useState(MovieState);
 
     return (
-        <div id='work'>
+        <motion.div id='work' variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
             {movies.map((movie) => (
                 <div className="movie">
                     <h2>{movie.title}</h2>
@@ -20,7 +23,7 @@ const OurWork = () => {
                     </Link>
                 </div>
             ))}
-        </div>
+        </motion.div>
     )
 }
 

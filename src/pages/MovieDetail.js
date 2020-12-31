@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import Award from '../components/Award';
 import { MovieState } from '../movieState'
+//Animatios
+import { motion } from 'framer-motion'
+import { pageAnimation } from '../animation'
 
 const MovieDetail = () => {
 
@@ -18,7 +21,7 @@ const MovieDetail = () => {
     return (
         <>
             {movie && (
-                <div className='details'>
+                <motion.div variants={pageAnimation} initial='hidden' animate='show' exit='exit' className='details'>
                     <div className="headline">
                         <h2>{movie.title}</h2>
                         <div className="image-display">
@@ -35,7 +38,7 @@ const MovieDetail = () => {
                     <div className="image-display">
                         <img src={movie.secondaryImg} alt="movie" />
                     </div>
-                </div>
+                </motion.div>
             )}
         </>
     )
