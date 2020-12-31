@@ -6,6 +6,8 @@ import { titleAnim, fade, photoAnim } from '../animation'
 import {
     Link
 } from 'react-router-dom'
+//Components
+import Wave from './Wave'
 
 const AboutSection = () => {
 
@@ -24,12 +26,12 @@ const AboutSection = () => {
                     </div>
                 </motion.div>
                 <motion.p variants={fade}>Contact us for any fotography or videography ideas that you have. We have professional with amazing skills</motion.p>
-                <motion.button variants={fade}><Link to='/contact'>Contact Us</Link></motion.button>
+                <Link to='/contact'><motion.button variants={fade}>Contact Us</motion.button></Link>
             </div >
             <div className="image">
                 <motion.img variants={photoAnim} src={home1} alt="A guy with a camera" />
             </div>
-
+            <Wave />
         </div >
     )
 }
