@@ -6,7 +6,8 @@ import {
 import { MovieState } from '../movieState';
 //Animatios
 import { motion } from 'framer-motion'
-import { pageAnimation } from '../animation'
+import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from '../animation'
+
 
 const OurWork = () => {
 
@@ -14,12 +15,20 @@ const OurWork = () => {
 
     return (
         <motion.div id='work' variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
+            <motion.div variants={sliderContainer}>
+                <motion.div variants={slider} className="frame frame1"></motion.div>
+                <motion.div variants={slider} className="frame frame2"></motion.div>
+                <motion.div variants={slider} className="frame frame3"></motion.div>
+                <motion.div variants={slider} className="frame frame4"></motion.div>
+            </motion.div>
             {movies.map((movie) => (
                 <div className="movie">
-                    <h2>{movie.title}</h2>
-                    <div className="line"></div>
+                    <motion.h2 variants={fade}>{movie.title}</motion.h2>
+                    <motion.div variants={lineAnim} className="line"></motion.div>
                     <Link to={movie.url}>
-                        <img src={movie.mainImg} alt={movie.title} />
+                        <div className="hide">
+                            <motion.img variants={photoAnim} src={movie.mainImg} alt={movie.title} />
+                        </div>
                     </Link>
                 </div>
             ))}
