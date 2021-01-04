@@ -6,9 +6,16 @@ import money from '../img/money.svg'
 import teamwork from '../img/teamwork.svg'
 import home2 from '../img/home2.png'
 
+//Animations
+import { scrollReveal } from '../animation'
+import { useScroll } from './UseScroll'
+import { motion } from 'framer-motion'
 const ServicesSection = () => {
+
+    const [element, controls] = useScroll();
+
     return (
-        <div id='services' className='layout'>
+        <motion.div variants={scrollReveal} id='services' initial='hidden' animate={controls} className='layout' ref={element}>
             <div className="description">
                 <h2>Hi <span>quality</span> services</h2>
                 <div className="cards">
@@ -45,7 +52,7 @@ const ServicesSection = () => {
             <div className="image">
                 <img src={home2} alt="Camera" />
             </div>
-        </div>
+        </motion.div>
     )
 }
 
