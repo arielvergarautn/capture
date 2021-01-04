@@ -79,3 +79,29 @@ export const MovieState = () => {
         },
     ];
 };
+
+export const FaqState = () => {
+    return [
+        {
+            title: 'How Do I Start?',
+            p1: 'Lorem ipsum dolor sit amet.',
+            p2: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat delectus nemo quae mollitia dolores quod eaque eos ut accusamus corporis?'
+        },
+        {
+            title: 'Daily Schedule',
+            p1: 'Lorem ipsum dolor sit amet.',
+            p2: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat delectus nemo quae mollitia dolores quod eaque eos ut accusamus corporis?'
+        },
+        {
+            title: 'Different Payment Method',
+            p1: 'Lorem ipsum dolor sit amet.',
+            p2: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat delectus nemo quae mollitia dolores quod eaque eos ut accusamus corporis?'
+        },
+        {
+            title: 'What Products Do You Offer?',
+            p1: 'Lorem ipsum dolor sit amet.',
+            p2: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat delectus nemo quae mollitia dolores quod eaque eos ut accusamus corporis?'
+        },
+    ]
+
+}

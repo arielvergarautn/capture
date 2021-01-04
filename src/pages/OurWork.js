@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import {
     Link
 } from 'react-router-dom';
-import { MovieState } from '../movieState';
+import { MovieState } from '../states';
 //Animatios
 import { motion } from 'framer-motion'
 import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from '../animation'

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import Award from '../components/Award';
-import { MovieState } from '../movieState'
+import { MovieState } from '../states'
 //Animatios
 import { motion } from 'framer-motion'
 import { pageAnimation } from '../animation'
