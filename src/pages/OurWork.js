@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-//Router
-import {
-    Link
-} from 'react-router-dom';
+//States
 import { MovieState } from '../states';
 //Animatios
 import { motion } from 'framer-motion'
-import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from '../animation'
+import { pageAnimation, slider, sliderContainer } from '../animation'
+import Movie from '../components/Movie';
+
 
 
 const OurWork = () => {
@@ -22,15 +21,16 @@ const OurWork = () => {
                 <motion.div variants={slider} className="frame frame4"></motion.div>
             </motion.div>
             {movies.map((movie) => (
-                <div className="movie">
-                    <motion.h2 variants={fade}>{movie.title}</motion.h2>
-                    <motion.div variants={lineAnim} className="line"></motion.div>
-                    <Link to={movie.url}>
-                        <div className="hide">
-                            <motion.img variants={photoAnim} src={movie.mainImg} alt={movie.title} />
-                        </div>
-                    </Link>
-                </div>
+                <Movie title={movie.title} url={movie.url} mainImg={movie.mainImg} />
+                // <div className="movie">
+                //     <motion.h2 variants={fade}>{movie.title}</motion.h2>
+                //     <motion.div variants={lineAnim} className="line"></motion.div>
+                //     <Link to={movie.url}>
+                //         <div className="hide">
+                //             <motion.img variants={photoAnim} src={movie.mainImg} alt={movie.title} />
+                //         </div>
+                //     </Link>
+                // </div>
             ))}
         </motion.div>
     )
