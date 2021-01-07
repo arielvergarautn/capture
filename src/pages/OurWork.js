@@ -5,6 +5,8 @@ import { MovieState } from '../states';
 import { motion } from 'framer-motion'
 import { pageAnimation, slider, sliderContainer } from '../animation'
 import Movie from '../components/Movie';
+//Components
+import ScrollTop from '../components/ScrollTop'
 
 
 
@@ -32,6 +34,7 @@ const OurWork = () => {
                 //     </Link>
                 // </div>
             ))}
+            <ScrollTop />
         </motion.div>
     )
 }

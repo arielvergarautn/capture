@@ -37,6 +37,7 @@ function App() {
           <Route path='*' component={NotFound} />
         </Switch>
       </AnimatePresence>
+
     </div>
   );
 }
