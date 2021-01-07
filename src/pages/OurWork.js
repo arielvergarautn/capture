@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 //States
 import { MovieState } from '../states';
 //Animatios
@@ -8,11 +7,9 @@ import Movie from '../components/Movie';
 //Components
 import ScrollTop from '../components/ScrollTop'
 
-
-
 const OurWork = () => {
 
-    const [movies, setMovies] = useState(MovieState);
+    const movies = MovieState();
 
     return (
         <motion.div id='work' variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
@@ -23,16 +20,7 @@ const OurWork = () => {
                 <motion.div variants={slider} className="frame frame4"></motion.div>
             </motion.div>
             {movies.map((movie) => (
-                <Movie title={movie.title} url={movie.url} mainImg={movie.mainImg} />
-                // <div className="movie">
-                //     <motion.h2 variants={fade}>{movie.title}</motion.h2>
-                //     <motion.div variants={lineAnim} className="line"></motion.div>
-                //     <Link to={movie.url}>
-                //         <div className="hide">
-                //             <motion.img variants={photoAnim} src={movie.mainImg} alt={movie.title} />
-                //         </div>
-                //     </Link>
-                // </div>
+                <Movie title={movie.title} url={movie.url} mainImg={movie.mainImg} key={movie.title} />
             ))}
             <ScrollTop />
         </motion.div>

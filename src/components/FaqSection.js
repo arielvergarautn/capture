@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Toggle from './Toggle'
 import { FaqState } from '../states'
 import { AnimateSharedLayout } from 'framer-motion'
@@ -10,7 +9,7 @@ import { motion } from 'framer-motion'
 
 const FaqSection = () => {
 
-    const [faqs, setFaqs] = useState(FaqState)
+    const faqs = FaqState();
     const [element, controls] = useScroll();
 
     return (
@@ -20,7 +19,7 @@ const FaqSection = () => {
                 {
                     faqs.map((faq) => (
 
-                        <Toggle title={faq.title}>
+                        <Toggle title={faq.title} key={faq.title}>
                             <div className="answer">
                                 <p>{faq.p1}</p>
                                 <p>{faq.p2}</p>
@@ -29,8 +28,7 @@ const FaqSection = () => {
                     ))
                 }
             </AnimateSharedLayout>
-
-        </motion.div>
+        </motion.div >
     )
 }
 export default FaqSection

@@ -27,8 +27,9 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+
       <AnimatePresence exitBeforeEnter>
+        <Nav />
         <Switch location={location} key={location.pathname}>
           <Route exact path='/' component={AboutUs} />
           <Route exact path='/work' component={OurWork} />

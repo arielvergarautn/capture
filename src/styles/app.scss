@@ -93,3 +93,25 @@ p{
 .hide{
     overflow: hidden;
 }
+
+
+
+@media (max-width: 1600px){
+    html{
+        font-size: 80%;
+    }
+
+}
+
+@media (max-width: 1024px){
+    html{
+        font-size: 50%;
+    }
+    #about{
+        display: block;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+}
+
+
